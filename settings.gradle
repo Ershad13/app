@@ -14,4 +14,21 @@
  * limitations under the License.
  */
 
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        // You can add other repositories here if needed, e.g., jcenter() for older libraries, or specific maven repos
+    }
+}
+
+rootProject.name = "MyProject" // You might want to change this to your actual project name
 include ':app'
