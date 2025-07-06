@@ -16,7 +16,8 @@
 
 package com.example.androidthings.myproject;
 
-import android.app.Activity;
+// Updated to androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -32,7 +33,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class MainActivity extends Activity {
+// Changed from Activity to AppCompatActivity
+public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
 
     private EditText amountEditText;
