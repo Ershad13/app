@@ -16,21 +16,18 @@
   -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.androidthings.myproject">
-    <uses-permission android:name="com.google.android.things.permission.USE_PERIPHERAL_IO"/>
-    <application android:label="@string/app_name">
-        <uses-library android:name="com.google.android.things"/>
+    <!-- Removed Android Things permission -->
+    <!-- <uses-permission android:name="com.google.android.things.permission.USE_PERIPHERAL_IO"/> -->
+    <application android:label="@string/app_name"
+        android:theme="@android:style/Theme.Material.Light"> <!-- Added a default theme -->
+        <!-- Removed Android Things library -->
+        <!-- <uses-library android:name="com.google.android.things"/> -->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-            <!-- Launch activity automatically on boot -->
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.IOT_LAUNCHER"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
+            <!-- Removed IOT_LAUNCHER intent filter as it's not needed for a regular app -->
         </activity>
     </application>
 </manifest>
