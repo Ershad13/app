@@ -33,9 +33,5 @@ plugins { // Required for AGP 7.0+
     id 'com.android.library' version '7.4.2' apply false
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral() // jcenter() is deprecated, use mavenCentral()
-    }
-}
+// allprojects { repositories {} } block removed as repositories are now managed in settings.gradle
+// with RepositoriesMode.FAIL_ON_PROJECT_REPOS
