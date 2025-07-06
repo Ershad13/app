@@ -14,6 +14,14 @@
  * limitations under the License.
  */
 
+// plugins {} block must be before other statements like buildscript {} or allprojects {}
+// (though buildscript {} can precede plugins {} if plugins are not in settings.gradle)
+// For simplicity and best practice with modern Gradle, plugins {} is often first.
+plugins { // Required for AGP 7.0+
+    id 'com.android.application' version '7.4.2' apply false
+    id 'com.android.library' version '7.4.2' apply false
+}
+
 buildscript {
     repositories {
         google()
@@ -32,8 +40,4 @@ allprojects {
         google()
         mavenCentral() // jcenter() is deprecated, use mavenCentral()
     }
-}
-plugins { // Required for AGP 7.0+
-    id 'com.android.application' version '7.4.2' apply false
-    id 'com.android.library' version '7.4.2' apply false
 }
